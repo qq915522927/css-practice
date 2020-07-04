@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .parent {
+            border: 1px solid plum;
+
+        }
+
+        .child {
+            border: 1px solid red;
+        }
+
+        #p1 {
+            height: 300px;
+            position: relative;
+        }
+
+        #c1 {
+            position: absolute;
+            height: 100px;
+            width: 100%;
+            top: 50%;
+            margin-top: -50px;
+        }
+
+        #p2 {
+            height: 300px;
+            line-height: 300px;
+        }
+
+        #p3 {
+            height: 300px;
+            width: 200px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        #p4 {
+            display: flex;
+            height: 300px;
+            width: 200px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #p5 {
+            height: 300px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+    <body>
+        <div id="p1" class="parent">
+            <div id="c1" class="child">固定高度的block水平居中： 设置absolute定位top 50%, margin-top 负的高度</div>
+        </div>
+
+        <div id="p2" class="parent">
+            <span id="c2" class="child">单行inline: 设置父元素的 line-height和height一致</span>
+        </div>
+
+        <div id="p3" class="parent">
+            <span id="c3" class="child">多行inline: 设置父元素的 display: table-cell, vertical-algin: middle</span>
+        </div>
+
+        <div id="p4" class="parent">
+            <span id="c4" class="child">flex: 设置父元素的 display: flex, 设置主轴方向flex-direction： column; justify-content: center;</span>
+        </div>
+
+        <div id="p5" class="parent">
+            <span id="c5" class="child">多行inline: 设置父元素的 display: flex, align-items: center</span>
+        </div>
+
+    </body>
+
+</html>

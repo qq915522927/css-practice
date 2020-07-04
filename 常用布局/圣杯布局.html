@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+
+        header,footer {background-color: gainsboro; height: 80px;}
+        footer {clear: both;}
+        .column { float: left; height: 300px;}
+        #center { background-color: red; width: 100%;}
+        #left, #right {background-color: green;}
+        #left {
+            width: 200px;
+            margin-left: -100%;
+            position: relative;
+            right: 200px;
+        }
+        #right {
+            width: 200px;
+            margin-left: -200px;
+            position: relative;
+            left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="container">
+        <div class="column" id="center">
+            <ul>
+                <li>两侧宽度固定, 中间宽度自适应</li>
+                <li>中间部分在DOM结构上优先，已便先渲染</li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="column" id="left">left</div>
+        <div class="column" id="right">right</div>
+    </div>
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* flex下所有子元素都变为block */
+
+    /* 用 justify-content: center; */
+    div {border: 1px solid red;}
+
+    #div1 {
+        width: 200px;
+        height: 200px;
+    }
+
+    #div2 {
+        width: 200px;
+        height: 200px;
+    }
+    #div3 { }
+
+    #parent {
+        height: 500px;
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+<body>
+   <div id="parent">
+       <div id="div1">
+           block
+       </div>
+       <div id="div2">
+           inline-block
+       </div>
+       <div id="div3">
+           inline
+
+       </div>
+   </div> 
+</body>
+</html>

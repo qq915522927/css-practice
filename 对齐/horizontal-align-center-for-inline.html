@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 对于inline元素， 在父元素上设置 text-align即可水平居中 */
+    #parent {
+        border: 1px red solid;
+        height: 400px;
+        width: 400px;
+        margin: 100px auto;
+        text-align: center;
+    }
+
+    #div1 {
+        display: inline;
+        background-color: yellow;
+    }
+</style>
+<body>
+
+    <div id="parent">
+        <div id="div1">hello</div>
+    </div>
+    
+</body>
+</html>

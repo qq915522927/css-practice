@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     /* 对于block, 左右margin设置auto就能居中 */
+    #div1 {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: red;
+
+    }
+
+
+    /* 对于inline-block, 在父元素上设置text-align,可以水平居中 */
+    #div2 {
+        display: inline-block;
+        background-color: aqua;
+        height: 100px;
+    }
+    #parent {
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="div1">定宽block</div>
+   <div id="parent">
+    <div id="div2">不定宽block....</div>
+   </div> 
+</body>
+</html>

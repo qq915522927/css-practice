@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            height: 300px;
+            align-items: stretch;
+            border: solid 1px red;
+        }
+        #left {
+            order: -1;
+            flex: 0 1 200px;
+            background-color: aqua;
+
+        }
+
+        #main {
+            flex-grow: 1;
+            background-color: red;
+        }
+        #right {
+            flex: 0 1 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="main"></div>
+        <div id="left"></div>
+        <div id="right"></div>
+    </div>
+    
+</body>
+</html>

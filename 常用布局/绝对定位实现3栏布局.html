@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {position: relative;}
+
+        #main {
+            background-color: red;
+            margin-left: 200px;
+            margin-right: 200px;
+            height: 300px;
+        }
+        #left {
+            background-color: aqua;
+            height: 300px;
+            width: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #right {
+            background-color: aqua;
+            height: 300px;
+            width: 200px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        header, footer {
+            height: 100px;
+            background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <div class="container">
+        <div id="main"></div>
+        <div id="left">绝对定位 top:0, left:0</div>
+        <div id="right">绝对定位： top：0， right: 0</div>
+    </div>
+    <footer></footer>
+</body>
+</html>
