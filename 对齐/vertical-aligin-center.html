@@ -54,6 +54,15 @@
             display: flex;
             align-items: center;
         }
+        #p6 {
+            width: 200px;
+            line-height: 300px;
+        }
+        #c6 {
+            display: inline-block ;
+            line-height: 20px;
+            vertical-align: middle;
+        }
     </style>
 
     <body>
@@ -62,7 +71,7 @@
         </div>
 
         <div id="p2" class="parent">
-            <span id="c2" class="child">单行inline: 设置父元素的 line-height和height一致</span>
+            <span id="c2" class="child">单行inline: 设置父元素的 line-height和height一致, 或者只设置line-hight将父元素的高度撑开</span>
         </div>
 
         <div id="p3" class="parent">
@@ -75,6 +84,10 @@
 
         <div id="p5" class="parent">
             <span id="c5" class="child">多行inline: 设置父元素的 display: flex, align-items: center</span>
+        </div>
+
+        <div id="p6" class="parent">
+            <div id="c6" class="child">多行inline-block: 父元素设置line-height使幽灵元素的line-hight变大，子元素设置vertical-align:middle来实现vertical的居中对齐</div>
         </div>
 
     </body>

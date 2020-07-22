@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .base {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background-color: red;
+            font-size: 20px;
+        }
+        #div1 {
+            vertical-align: 10px;
+        }
+
+        #div2 {
+            overflow: hidden;
+            /* vertical-align: bottom; */
+        }
+
+        #div3 {
+            vertical-align: middle;
+        }
+
+        #div4 {
+            vertical-align: baseline;
+        }
+
+        #div5 {
+            vertical-align: baseline;
+            height: 150px;
+        }
+
+        #div6 {
+            vertical-align: bottom;
+            height: 150px;
+        }
+
+
+        #div11 {
+            vertical-align: top;
+        }
+
+        #div12 {
+            vertical-align: bottom;
+        }
+
+
+        .father {
+            border: 1px solid royalblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div id="div1" class="base"></div>
+        <div id="div2" class="base">base-line overflow: hidden</div>
+        <div id="div3" class="base">x middle</div>
+        <div id="div4" class="base">x base-line 多行</div>
+        <div id="div5" class="base">x base-line</div>
+        <div id="div6" class="base">x bottom</div>
+
+        <p>以base-line对齐的元素对齐来确定父元素的base-line, 从而确定 行框盒子，确定top, middle， bottom</p>
+        <p>top, middle, button是 以自身的top, middle, bottom去对齐父元素的top, middle， bottom</p>
+
+    </div>
+
+    <div class="father">
+        <div id="div7" class="base">xxx</div>
+        <div id="div8" class="base">xxx</div>
+        <div id="div9" class="base">xxxxxxxxx换行xxxx</div>
+
+    </div>
+
+    <div class="father">
+        <div id="div10" class="base">base-line</div>
+        <div id="div11" class="base">top</div>
+        <div id="div12" class="base">bottom</div>
+        <div id="div13" style="vertical-align: middle;" class="base">middle</div>
+        <p>只有一个元素是base-line, 另一个是middle, 两个一起决定 行框盒子</p>
+    </div>
+
+    <h3> 幽灵节点 造成 img下方产生空隙</h3>
+    <div class="father" style="font-size: 30px;">
+        <img src="../image/image.jpeg">
+    </div>
+    <h4> line-height 设为0</h4>
+    <div class="father" style="font-size: 30px; line-height: 0px;">
+        <img src="../image/image.jpeg">x
+    </div>
+    <h4> font size 设为0</h4>
+    <div class="father" style="font-size: 0;">
+        <img src="../image/image.jpeg">x
+    </div>
+    <h4>设置img的vertical-align为 top, bottom, middle</h4>
+    <div class="father" style="font-size: 30px; ">
+        <img style="vertical-align: middle;" src="../image/image.jpeg">x
+    </div>
+</body>
+</html>

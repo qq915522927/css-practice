@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            line-height: 300px;
+            background-color: red;
+        }
+        #child1 {
+            line-height: 20px;
+            background-color: yellow;
+        }
+
+        #div2 {
+            margin-top: 10px;
+            line-height: 20px;
+            background-color: red;
+        }
+        #child2 {
+            line-height: 300px;
+            background-color: yellow;
+        }
+
+        #div3 {
+            margin-top: 10px;
+            line-height: 300px;
+            background-color: red;
+        }
+        #child3 {
+            display: inline-block;
+            line-height: 20px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"><span id="child1">inline元素: 外div的line-height为300， 内span的line-height20, 最终表现的line-height为300</span></div>
+
+    <div id="div2"><span id="child2">inline元素: 外div的line-height为20， 内span的line-height300， 最终表现的line-height为300</span></div>
+
+    <div id="div3"><span id="child3">inline-block元素, 因为inline-block生成一个新的 行框盒子，再次设置line-height即可重置外面来的line-height: 外div的line-height为300， 内span的line-height20， 最终表现的line-height为20</span></div>
+</body>
+</html>
